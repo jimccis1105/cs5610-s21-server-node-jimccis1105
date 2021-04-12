@@ -12,9 +12,6 @@ app.use(function (req, res, next) {
     next();
 });
 
-// const quizzesController = require('./controllers/quizzes-controller')
-// quizzesController(app)
-
 require('./controllers/quizzes-controller')(app)
 require('./controllers/questions-controller')(app)
 

@@ -10,9 +10,6 @@ const findQuizById = (quizId) => {
     })
 }
 
-// console.log(findAllQuizzes())
-// console.log(findQuizById('123'))
-
 // TODO: MongoDB Assignment next week
 const createQuiz = () => {}
 const updateQuiz = () => {}
