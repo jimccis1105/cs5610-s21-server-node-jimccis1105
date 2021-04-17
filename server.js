@@ -1,6 +1,9 @@
 // TODO: visit https://expressjs.com/
 const express = require('express')
 const app = express()
+var bodyParser = require('body-parser')
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
 
 // Configures CORS
 app.use(function (req, res, next) {
@@ -14,5 +17,6 @@ app.use(function (req, res, next) {
 
 require('./controllers/quizzes-controller')(app)
 require('./controllers/questions-controller')(app)
+require('./controllers/quiz-attempts-controller')(app)
 
 app.listen(4000)
